@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Moji</string>
+    <string name="question">How are you feeling today?</string>
+    <string name="subtitle">Take a moment to check in with yourself.</string>
+</resources>

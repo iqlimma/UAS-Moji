@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:background="#CCCCCC"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick a Sticker"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/stickerThink"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/sticker_think"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:background="@color/milkwhite_base"
+            android:scaleType="fitCenter"
+            android:contentDescription="Think sticker"/>
+
+        <ImageView
+            android:id="@+id/stickerFlower"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/sticker_flower"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:background="@color/milkwhite_base"
+            android:scaleType="fitCenter"
+            android:contentDescription="Flower sticker"/>
+
+        <ImageView
+            android:id="@+id/stickerCloud"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/sticker_cloud"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:background="@color/milkwhite_base"
+            android:scaleType="fitCenter"
+            android:contentDescription="Cloud sticker"/>
+
+        <ImageView
+            android:id="@+id/stickerStar"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/sticker_star"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:background="@color/milkwhite_base"
+            android:scaleType="fitCenter"
+            android:contentDescription="Star sticker"/>
+
+    </LinearLayout>
+
+</LinearLayout>

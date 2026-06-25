@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="milkwhite_base">#FEFCFF</color>
+
+    <color name="yellow_normal">#FFD527</color>
+    <color name="yellow_light">#FFFBE9</color>
+
+    <color name="pink_normal">#FF7DB1</color>
+    <color name="pink_light">#FFF2F7</color>
+
+    <color name="blue_normal">#4385F5</color>
+    <color name="blue_light">#ECF3FE</color>
+
+    <color name="green_normal">#5BDE6C</color>
+    <color name="green_light">#EFFCF0</color>
+
+    <color name="red_normal">#E84639</color>
+    <color name="red_light">#FDEDEB</color>
+
+    <color name="purple_normal">#E57CFF</color>
+    <color name="purple_light">#FBEFFE</color>
+
+    <color name="mood_happy_bg">#FFFBE9</color>
+    <color name="mood_neutral_bg">#FFF2F7</color>
+    <color name="mood_sad_bg">#ECF3FE</color>
+    <color name="mood_tired_bg">#EFFCF0</color>
+    <color name="mood_angry_bg">#FDEDEB</color>
+    <color name="mood_envy_bg">#FBEFFE</color>
+</resources>
