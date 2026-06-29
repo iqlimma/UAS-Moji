@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,8 +16,23 @@
         android:layout_marginTop="24dp"
         android:adjustViewBounds="true"
         android:src="@drawable/ic_moji_logo"
+        android:contentDescription="Moji Logo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Logout Button -->
+    <ImageButton
+        android:id="@+id/btnLogout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_logout"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Logout"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -32,7 +48,6 @@
             android:orientation="vertical"
             android:paddingHorizontal="24dp">
 
-            <!-- STEP 1: INITIAL DASHBOARD -->
             <LinearLayout
                 android:id="@+id/layoutDashboard"
                 android:layout_width="match_parent"
@@ -40,7 +55,6 @@
                 android:orientation="vertical"
                 android:visibility="visible">
 
-                <!-- Title Section -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -49,7 +63,7 @@
                     android:text="Put your thoughts into words"
                     android:textColor="@color/black"
                     android:textSize="18sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -57,9 +71,8 @@
                     android:fontFamily="@font/nunito"
                     android:text="A moment just for you"
                     android:textColor="#808080"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"/>
 
-                <!-- Daily Quote Card -->
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="240dp"
@@ -87,20 +100,21 @@
                             android:textStyle="bold"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            app:layout_constraintTop_toTopOf="parent"/>
 
                         <ImageView
                             android:layout_width="120dp"
                             android:layout_height="100dp"
                             android:src="@drawable/moji_happy"
+                            android:contentDescription="Moji happy"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@id/tvDailyTip" />
+                            app:layout_constraintTop_toBottomOf="@id/tvDailyTip"/>
+
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- My Journal Bar -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/cardJournal"
                     android:layout_width="match_parent"
@@ -118,7 +132,7 @@
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"/>
 
                     <TextView
                         android:id="@+id/tvJournalCount"
@@ -133,10 +147,10 @@
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent"/>
+
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <!-- Empty State -->
                 <LinearLayout
                     android:id="@+id/layoutDataEmpty"
                     android:layout_width="match_parent"
@@ -153,24 +167,27 @@
                         android:fontFamily="@font/nunito"
                         android:text="Nothing here yet"
                         android:textColor="#333333"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"/>
 
                     <FrameLayout
                         android:layout_width="160dp"
                         android:layout_height="160dp">
+
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/bg_circle_blue_light_state" />
+                            android:background="@drawable/bg_circle_blue_light_state"/>
+
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/moji_sad" />
+                            android:src="@drawable/moji_sad"
+                            android:contentDescription="Empty state"/>
+
                     </FrameLayout>
                 </LinearLayout>
 
-                <!-- Color Bars (FILLED state) -->
                 <LinearLayout
                     android:id="@+id/layoutDataPresent"
                     android:layout_width="match_parent"
@@ -180,10 +197,10 @@
                     android:orientation="horizontal"
                     android:visibility="gone">
 
-                    <include layout="@layout/item_mood_bar_vertical" />
-                    <include layout="@layout/item_mood_bar_vertical" />
-                    <include layout="@layout/item_mood_bar_vertical" />
-                    <include layout="@layout/item_mood_bar_vertical" />
+                    <include layout="@layout/item_mood_bar_vertical"/>
+                    <include layout="@layout/item_mood_bar_vertical"/>
+                    <include layout="@layout/item_mood_bar_vertical"/>
+                    <include layout="@layout/item_mood_bar_vertical"/>
 
                 </LinearLayout>
 
@@ -199,10 +216,10 @@
                     android:textColor="@color/white"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    android:visibility="gone" />
+                    android:visibility="gone"/>
+
             </LinearLayout>
 
-            <!-- STEP 2: MOOD SELECTION -->
             <LinearLayout
                 android:id="@+id/layoutMoodSelection"
                 android:layout_width="match_parent"
@@ -218,7 +235,7 @@
                     android:text="How are you feeling today?"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -226,7 +243,7 @@
                     android:fontFamily="@font/nunito"
                     android:text="Take a moment to check in with yourself."
                     android:textColor="#808080"
-                    android:textSize="14sp" />
+                    android:textSize="14sp"/>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvMoodCards"
@@ -236,9 +253,11 @@
                     android:nestedScrollingEnabled="false"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:spanCount="2"
-                    tools:listitem="@layout/item_mood_card" />
+                    tools:listitem="@layout/item_mood_card"/>
+
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

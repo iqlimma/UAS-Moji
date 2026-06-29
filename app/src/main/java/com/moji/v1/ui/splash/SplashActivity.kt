@@ -6,7 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.moji.v1.databinding.ActivitySplashBinding
-import com.moji.v1.ui.main.MainActivity
+import com.moji.v1.ui.auth.LoginActivity
 
 class SplashActivity : AppCompatActivity() {
 
@@ -18,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
         }, 2000)
     }
