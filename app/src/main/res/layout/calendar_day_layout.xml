@@ -1,18 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="4dp">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tvCalendarDay"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:textSize="13sp"
-        android:gravity="center"
-        android:textColor="#1A1A1A"/>
+    <FrameLayout
+        android:id="@+id/dayContainer"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_calendar_day"
+        android:clipToOutline="true">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/imgDayMood"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+            android:contentDescription="Mood character"/>
+
+        <TextView
+            android:id="@+id/tvCalendarDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="4dp"
+            android:textSize="13sp"
+            android:textColor="#1A1A1A"/>
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -13,6 +13,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.moji.v1.R
 import com.moji.v1.adapter.MoodAdapter
 import com.moji.v1.database.SessionManager
+import com.moji.v1.database.DatabaseHelper
 import com.moji.v1.databinding.FragmentHomeBinding
 import com.moji.v1.model.Mood
 import com.moji.v1.ui.auth.LoginActivity
@@ -67,11 +68,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun updateDashboardVisibility() {
-        val entries = com.moji.v1.data.DummyData.entries
+        val userId = SessionManager(requireContext()).getUserId()
+        val entries = DatabaseHelper(requireContext()).getJournalsByUser(userId)
         val hasEntries = entries.isNotEmpty()
-
-        binding.layoutMoodSelection.visibility = View.GONE
-        binding.layoutDashboard.visibility = View.VISIBLE
 
         if (hasEntries) {
             binding.layoutDataPresent.visibility = View.VISIBLE

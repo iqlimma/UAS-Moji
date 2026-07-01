@@ -5,5 +5,6 @@ data class JournalEntry(
     val mood: Mood,
     val content: String,
     val date: String,
-    val dateKey: String
+    val dateKey: String,
+    val time: String = ""
 )

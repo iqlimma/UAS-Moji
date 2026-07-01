@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:background="#CCCCCC"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter by Mood"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:layout_marginBottom="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/filterAll"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="All"
+        android:layout_marginBottom="8dp"
+        app:cornerRadius="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/filterHappy"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Happy"
+        android:layout_marginBottom="8dp"
+        app:cornerRadius="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/filterNeutral"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Neutral"
+        android:layout_marginBottom="8dp"
+        app:cornerRadius="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/filterSad"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Sad"
+        android:layout_marginBottom="8dp"
+        app:cornerRadius="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/filterTired"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Tired"
+        android:layout_marginBottom="8dp"
+        app:cornerRadius="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/filterAngry"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Angry"
+        android:layout_marginBottom="8dp"
+        app:cornerRadius="12dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/filterEnvy"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Envy"
+        android:layout_marginBottom="8dp"
+        app:cornerRadius="12dp"/>
+
+</LinearLayout>

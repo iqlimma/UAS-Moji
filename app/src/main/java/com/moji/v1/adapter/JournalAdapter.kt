@@ -2,6 +2,7 @@ package com.moji.v1.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.moji.v1.databinding.ItemJournalBinding
 import com.moji.v1.model.JournalEntry
@@ -22,15 +23,21 @@ class JournalAdapter(
     }
 
     override fun onBindViewHolder(holder: JournalViewHolder, position: Int) {
-        val (id, mood, content, date, dateKey) = entries[position]
+        val entry = entries[position]
 
         with(holder.binding) {
-            tvItemMood.text = mood.label
-            tvItemContent.text = content
-            tvItemDate.text = date
-            imgItemChar.setImageResource(mood.character)
-            cardJournalItem.setBackgroundResource(mood.cardBackground)
-            root.setOnClickListener { onClick(entries[position]) }
+            tvItemMood.text = entry.mood.label
+            tvItemContent.text = entry.content
+            tvItemTime.text = entry.time
+            imgItemChar.setImageResource(entry.mood.character)
+
+            cardJournalItem.setCardBackgroundColor(
+                ContextCompat.getColor(root.context, android.R.color.white)
+            )
+            cardJournalItem.strokeWidth = 4
+            cardJournalItem.strokeColor = ContextCompat.getColor(root.context, entry.mood.backgroundColor)
+
+            root.setOnClickListener { onClick(entry) }
         }
     }
 
